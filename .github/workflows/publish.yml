@@ -2,7 +2,7 @@ name: Update and Deploy
 
 on:
   push:
-    branches: ['main']
+    branches: ['website']
   schedule:
   - cron: "0 0 * * *"
   workflow_dispatch:
