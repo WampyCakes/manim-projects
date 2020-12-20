@@ -1,1 +1,8 @@
 node_modules
+debug.log
+dist
+public/submissions.json
+public/favicon.ico
+.gitignore
+README.md
+babel.config.js

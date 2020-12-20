@@ -16,7 +16,7 @@
           </div>
           <p class="mb-auto py-3 ml-5 text-left">{{ project.description }}</p>
           <div>
-            <p tabindex="0" class="btn btn-outline-light hover-card mt-3 d-flex" style="align-items: center; height: 58px; background: white; color: black; float: left"
+            <p tabindex="0" class="btn btn-outline-light hover-card mt-4 d-flex" style="align-items: center; background: white; color: black; float: left"
             data-trigger="focus" data-toggle="popover" data-placement="right" v-bind:data-content="[project.subfields.length === 0 ? 'No subfields listed' : project.
             subfields.join(', ')]">{{ project.fields.join(', ') }} ❯ </p>
             <a class="" v-if="project.repository !== ''" v-bind:href="project.repository">
@@ -33,16 +33,22 @@
 </template>
 
 <script>
-import json from '.././assets/data.json'
 const _ = require("lodash")
 export default {
   name: 'Projects',
   props: {
     msg: String
   },
+  created() {
+    fetch('https://raw.githubusercontent.com/WampyCakes/manim-projects/main/submissions.json')
+      .then(response => response.json())
+      .then(json => {
+        this.data = json
+      })
+  },
   data() {
     return{
-      data: json
+      data: []
     }
   },
   computed: {

@@ -4,7 +4,7 @@
         <a class="navbar-brand" draggable="False" href="https://www.manim.community/">
           <img
             draggable="False"
-            src="./assets/logo.svg"
+            src="./assets/manim-logo.svg"
             width="60"
             height="60"
             alt="Manim Community Logo"
