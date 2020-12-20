@@ -84,8 +84,7 @@
         </div>
       </nav>
     </header>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <projects msg="Welcome to Your Vue.js App"/>
+  <projects/>
 </template>
 
 <script>

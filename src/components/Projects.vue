@@ -34,11 +34,10 @@
 
 <script>
 const _ = require("lodash")
+import $ from 'jquery'
+// import json from '../../public/submissions.json'
 export default {
   name: 'Projects',
-  props: {
-    msg: String
-  },
   created() {
     fetch('https://raw.githubusercontent.com/WampyCakes/manim-projects/main/submissions.json')
       .then(response => response.json())
@@ -46,9 +45,12 @@ export default {
         this.data = json
       })
   },
+  updated() {
+    $('[data-toggle="popover"]').popover({trigger:'hover'})
+  },
   data() {
     return{
-      data: []
+      data: []//json
     }
   },
   computed: {

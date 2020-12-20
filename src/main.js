@@ -3,12 +3,12 @@ import App from './App.vue'
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css'
-import $ from 'jquery'
+// import $ from 'jquery'
 
 createApp(App).mount('#app')
-$(function () {
-    $('[data-toggle="popover"]').popover()
-})
-$('.popover-dismiss').popover({
-    trigger: 'focus'
-})
+// $(function () {
+//     $('[data-toggle="popover"]').popover()
+// })
+// $('.popover-dismiss').popover({
+//     trigger: 'focus'
+// })
