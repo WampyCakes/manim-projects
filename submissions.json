@@ -64,16 +64,5 @@
         "fields": ["Mathematics"],
         "subfields": [],
         "tags": []
-    },
-    {
-        "title": "Vimeo embeds work too!",
-        "author": "",
-        "video_url": "https://player.vimeo.com/video/336812660",
-        "repository": "",
-        "github_user": "https://github.com/3b1b",
-        "description": "This entry shows what automatically happens when: a) a vimeo video is provided b) an author does not want their name on this page c) the video is not open source, and d) subfields and tags are not provided.",
-        "fields": ["Mathematics"],
-        "subfields": [],
-        "tags": []
     }
 ]
