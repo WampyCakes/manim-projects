@@ -12,16 +12,10 @@ jobs:
   update:
     runs-on: windows-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      with:
-          persist-credentials: false
-    - name: Commit New File 
-      run: |
-        git add submissions.json
-        git commit -m "Automatically updated submissions.json"
-    - name: Push File
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+      - uses: actions/checkout@v2
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add submissions.json
+          git commit -m "Automatically updated submissions.json"
+          git push origin gh-pages
