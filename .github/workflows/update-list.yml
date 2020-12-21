@@ -1,0 +1,27 @@
+name: Update Submissions List
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - 'submissions.json'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+          persist-credentials: false
+    - name: Commit New File 
+      run: |
+        git add submissions.json
+        git commit -m "Automatically updated submissions.json"
+    - name: Push File
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
