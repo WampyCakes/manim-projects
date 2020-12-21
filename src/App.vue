@@ -82,6 +82,16 @@
             </li>
           </ul>
         </div>
+        <a
+          href="https://github.com/WampyCakes/manim-projects"
+          class="nav-link"
+          rel="noopener noreferrer"
+          style="float: right"
+          >
+            <button type="button" class="btn btn-outline-light">
+              <strong>Submit Your Manim Project</strong>
+            </button>
+        </a>
       </nav>
     </header>
   <projects/>
