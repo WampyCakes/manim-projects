@@ -17,8 +17,8 @@
           <p class="mb-auto py-3 ml-5 text-left">{{ project.description }}</p>
           <div>
             <p tabindex="0" class="btn btn-outline-light hover-card mt-4 d-flex" style="align-items: center; background: white; color: black; float: left"
-            data-trigger="focus" data-toggle="popover" data-placement="right" v-bind:data-content="[project.subfields.length === 0 ? 'No subfields listed' : project.
-            subfields.join(', ')]">{{ project.fields.join(', ') }} ❯ </p>
+            data-trigger="focus" data-toggle="popover" data-placement="right" title="Subfields" v-bind:data-content="[project.subfields.length === 0 ? 'No subfields listed' : project.
+            subfields.join(', ')]">Fields: {{ project.fields.join(', ') }} ❯ </p>
             <a class="" v-if="project.repository !== ''" v-bind:href="project.repository">
               <button type="button" class="btn btn-outline-light hover-card mt-3" style="background: white; color: black; float: right">
                 Video source code available on GitHub <img height="45" width="45" draggable="false" src="../assets/github-logo.svg">
@@ -35,22 +35,25 @@
 <script>
 const _ = require("lodash")
 import $ from 'jquery'
+import json from './submissions.json'
 // import json from '../../public/submissions.json'
 export default {
   name: 'Projects',
-  created() {
-    fetch('https://raw.githubusercontent.com/WampyCakes/manim-projects/main/submissions.json')
-      .then(response => response.json())
-      .then(json => {
-        this.data = json
-      })
-  },
+  // created() {
+  //   fetch('https://raw.githubusercontent.com/WampyCakes/manim-projects/main/submissions.json')
+  //     .then(response => response.json())
+  //     .then(json => {
+  //       this.data = json
+  //     })
+  // },
   updated() {
+    console.log("updated!");
     $('[data-toggle="popover"]').popover({trigger:'hover'})
   },
   data() {
     return{
-      data: []//json
+      data: json,
+      counter: 2
     }
   },
   computed: {
@@ -59,6 +62,14 @@ export default {
     },
     colors() {
       return ["#81b29a", "#454866", "#e07a5f"]
+    }
+  },
+  methods: {
+    getInitialProjects() {
+
+    },
+    loadMoreProjects()  {
+      this.counter += 2
     }
   }
 }

@@ -65,3 +65,7 @@ body {
 .hover-card:hover {
   transform: scale(1.07);
 }
+
+.popover-header {
+  font-size: 0.8rem;
+}

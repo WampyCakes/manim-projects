@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './main.css'
+import './assets/main.css'
 // import $ from 'jquery'
 
 createApp(App).mount('#app')
