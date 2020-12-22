@@ -14,10 +14,13 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v2
+        with:
+          path: repo
       - name: Checkout gh-pages
         uses: actions/checkout@v2
         with:
           ref: gh-pages
+          path: repo
       - run: |
           git remote update
           git fetch
