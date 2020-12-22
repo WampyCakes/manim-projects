@@ -35,7 +35,7 @@
 <script>
 const _ = require("lodash")
 import $ from 'jquery'
-import json from '../../static/submissions.json'
+// import json from '../../static/submissions.json'
 // import json from '../../public/submissions.json'
 export default {
   name: 'Projects',
@@ -52,7 +52,7 @@ export default {
   },
   data() {
     return{
-      data: json,
+      data: fetch(process.env.BASE_URL + 'submissions.json'),
       counter: 2
     }
   },
