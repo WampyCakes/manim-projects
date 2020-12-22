@@ -86,5 +86,16 @@
         "fields": ["Mathematics", "Science"],
         "subfields": ["Biology, SIR Models"],
         "tags": ["COVID-19"]
+    },
+    {
+        "title": "Simulating an epidemic",
+        "author": "Grant Sanderson",
+        "video_url": "https://www.youtube.com/embed/gxAaO2rsdIs",
+        "repository": "https://github.com/3b1b/manim/tree/shaders",
+        "github_user": "https://github.com/3b1b",
+        "description": "Experiments with toy SIR models",
+        "fields": ["Mathematics", "Science"],
+        "subfields": ["Biology, SIR Models"],
+        "tags": ["COVID-19"]
     }
 ]
