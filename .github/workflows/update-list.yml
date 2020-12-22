@@ -22,6 +22,7 @@ jobs:
           ref: gh-pages
           path: repo
       - run: |
+          cd repo
           git remote update
           git fetch
           git config user.name github-actions
