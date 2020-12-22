@@ -13,15 +13,17 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: gh-pages, main
       - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git checkout gh-pages
           git checkout main submissions.json
           git commit -m "Automatically updated submissions.json"
           git status
           git push origin gh-pages
           git status
-          # git config user.name github-actions
-          # git config user.email github-actions@github.com
           # git checkout -b 
           # git add submissions.json
           # git commit -m "Automatically updated submissions.json"
