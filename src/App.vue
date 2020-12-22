@@ -24,7 +24,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="social">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav" style="display: flex; align-items: center">
             <li class="nav-item">
               <a
                 href="https://docs.manim.community"
@@ -32,19 +32,31 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 ><button type="button" class="btn btn-outline-light">
-                  <i class="fas fa-book"></i> Documentation
+                  <strong>Documentation</strong>
                 </button></a
               >
             </li>
-            <li class="nav-item">
+            <a
+            href="https://github.com/WampyCakes/manim-projects"
+            class="nav-link"
+            rel="noopener noreferrer"
+            style="float: right"
+            >
+            <button type="button" class="btn btn-outline-light">
+              <strong>Submit Your Manim Project</strong>
+            </button>
+            </a>
+          </ul>
+        </div>
+        <li class="nav-item">
               <a
                 href="https://github.com/ManimCommunity/manim"
                 class="nav-link"
                 target="_blank"
-                rel="noopener noreferrer"
-                ><button type="button" class="btn btn-outline-light">
-                  <i class="fab fa-github"></i> GitHub
-                </button></a
+                ><img class="hover-social" height="48" width="48" style="margin-top:-2px" draggable="false" src="./assets/github-logo.svg">
+                <!-- <button type="button" class="btn btn-outline-light">
+                </button> -->
+                </a
               >
             </li>
             <li class="nav-item">
@@ -53,20 +65,10 @@
                 class="nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><button type="button" class="btn btn-outline-light">
-                  <i class="fab fa-twitter"></i> Twitter
-                </button></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://discord.gg/mMRrZQW"
-                class="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><button type="button" class="btn btn-outline-light">
-                  <i class="fab fa-discord"></i> Discord
-                </button></a
+                ><img class="hover-social" height="48" width="48" draggable="false" src="./assets/twitter-logo.svg">
+                <!-- <button type="button" class="btn btn-outline-light">
+                </button> -->
+                </a
               >
             </li>
             <li class="nav-item">
@@ -75,23 +77,25 @@
                 class="nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><button type="button" class="btn btn-outline-light">
-                  <i class="fab fa-reddit"></i> Reddit
-                </button></a
+                >
+                <img class="hover-social" height="48" width="48" draggable="false" src="./assets/reddit-logo.png">
+                <!-- <button type="button" class="btn btn-outline-light">
+                </button> -->
+                </a
               >
             </li>
-          </ul>
-        </div>
-        <a
-          href="https://github.com/WampyCakes/manim-projects"
-          class="nav-link"
-          rel="noopener noreferrer"
-          style="float: right"
-          >
-            <button type="button" class="btn btn-outline-light">
-              <strong>Submit Your Manim Project</strong>
-            </button>
-        </a>
+            <li class="nav-item">
+              <a
+                href="https://discord.gg/mMRrZQW"
+                class="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img class="hover-social" height="60" width="60" style="margin-top:2px; margin-left: -4px;" draggable="false" src="./assets/discord-logo.svg">
+                <!-- <button type="button" class="btn btn-outline-light">
+                </button> -->
+                </a
+              >
+            </li>
       </nav>
     </header>
   <projects/>

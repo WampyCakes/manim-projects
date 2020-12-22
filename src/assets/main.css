@@ -58,12 +58,20 @@ body {
   transition: transform 0.2s ease-out;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
 }
+
+.hover-social{
+  transition: transform 0.2s ease-out;
+}
 .summary{
   height:75px;
   overflow: hidden;
 }
 .hover-card:hover {
   transform: scale(1.07);
+}
+
+.hover-social:hover {
+  transform: scale(1.15);
 }
 
 .popover-header {
