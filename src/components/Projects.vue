@@ -46,13 +46,20 @@ export default {
   //       this.data = json
   //     })
   // },
+  created() {
+    fetch('submissions.json')
+      .then(response => response.json())
+      .then(json => {
+        this.data = json
+      })
+  },
   updated() {
     console.log("updated!");
     $('[data-toggle="popover"]').popover({trigger:'hover'})
   },
   data() {
     return{
-      data: fetch(process.env.BASE_URL + 'submissions.json'),
+      data: [],
       counter: 2
     }
   },
