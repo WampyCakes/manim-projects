@@ -35,7 +35,8 @@
 <script>
 const _ = require("lodash")
 import $ from 'jquery'
-import json from '../../public/submissions.json'
+import json from '../../static/submissions.json'
+// import json from '../../public/submissions.json'
 export default {
   name: 'Projects',
   // created() {
