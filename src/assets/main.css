@@ -1,59 +1,34 @@
 body {
   background-color: #ece6e2;
 }
-:root {
-  --loader-width: 70px;
-  --loader-height: 70px;
-  --loader-color-primary: #27ae60;
-  --loader-color-secondary: #eee;
-  --line-width: 3px;
-  --animation-duration: 2s;
-  --loader-initial-scale: 0.1;
-}
-.loader,
-.loader:before,
-.loader:after {
-  box-sizing: border-box;
-  flex-grow: 0;
-  flex-shrink: 0;
+
+.rv-text {
+  white-space: unset !important;
+  overflow: visible !important;
+  word-break: unset !important;
 }
 
-@keyframes block-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+/* @font-face {
+  font-family: FontAwesome;
+  src: url( "../fonts/fontawesome.eot?#iefix" ) format( "embedded-opentype" ),
+      url( "../fonts/fontawesome.woff2" ) format( "woff2" ),
+      url( "../fonts/fontawesome.woff" ) format( "woff" ),
+      url( "../fonts/fontawesome.ttf" ) format( "truetype" ),
+      url( "../fonts/fontawesome.svg#fontawesome" ) format( "svg" );
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+} */
 
-.loader.block-spin {
-  height: var(--loader-height, 100px);
-  width: var(--loader-width, 100px);
-  position: relative;
-  border-radius: 60px;
-  border: var(--line-width, 4px) solid;
-  color: var(--loader-color-primary, #33f);
-  border-left-color: transparent;
-  border-top-color: transparent;
-  animation: block-spin var(--animation-duration, 0.8s) linear infinite;
-}
+/* .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
 
-.loader.loader.block-spin:after {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  top: var(--loader-offset, 50%);
-  left: var(--loader-offset, 50%);
-  border-radius: 60px;
-  border: var(--line-width, 4px) solid;
-  color: var(--loader-color-primary, #33f);
-  margin-top: -15px;
-  margin-left: -15px;
-}
 .hover-card{
   transition: transform 0.2s ease-out;
   box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
@@ -62,10 +37,12 @@ body {
 .hover-social{
   transition: transform 0.2s ease-out;
 }
+
 .summary{
   height:75px;
   overflow: hidden;
 }
+
 .hover-card:hover {
   transform: scale(1.07);
 }
